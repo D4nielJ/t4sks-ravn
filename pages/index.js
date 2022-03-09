@@ -1,7 +1,7 @@
 const Home = () => {
   return (
-    <div className='bg-black text-white h-screen flex flex-col justify-center items-center'>
-      <p className='text-5xl uppercase tracking-[2rem] font-black'>
+    <div className="flex h-screen flex-col items-center justify-center bg-black text-white">
+      <p className="text-5xl font-black uppercase tracking-[2rem]">
         Hello world!
       </p>
     </div>
