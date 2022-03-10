@@ -1,53 +1,54 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const headingProps = [
   {
     type: 'DisplayXLarge',
     tag: 'h2',
-    font: 'SFProDisplay',
-    weight: 'semibold',
-    size: '42px',
-    lineHeight: '44px',
+    font: 'font-display',
+    weight: 'font-semibold',
+    size: 'text-[42px]',
+    lineHeight: 'leading-[44px]',
   },
   {
     type: 'DisplayLarge',
     tag: 'h2',
-    font: 'SFProDisplay',
-    weight: 'semibold',
-    size: '28px',
-    lineHeight: '32px',
+    font: 'font-display',
+    weight: 'font-semibold',
+    size: 'text-[28px]',
+    lineHeight: 'leading-[32px]',
   },
   {
     type: 'DisplayMedium',
     tag: 'h3',
-    font: 'SFProDisplay',
-    weight: 'regular',
-    size: '26px',
-    lineHeight: '32px',
+    font: 'font-display',
+    weight: 'font-normal',
+    size: 'text-[26px]',
+    lineHeight: 'leading-[32px]',
   },
   {
     type: 'DisplaySmall',
     tag: 'h4',
-    font: 'SFProDisplay',
-    weight: 'regular',
-    size: '20px',
-    lineHeight: '28px',
+    font: 'font-display',
+    weight: 'font-normal',
+    size: 'text-[20px]',
+    lineHeight: 'leading-[28px]',
   },
   {
     type: 'Heading',
     tag: 'h5',
-    font: 'SFProText',
-    weight: 'semibold',
-    size: '16px',
-    lineHeight: '24px',
+    font: 'font-serif',
+    weight: 'font-semibold',
+    size: 'text-[16px]',
+    lineHeight: 'leading-[24px]',
   },
   {
     type: 'Subheading',
     tag: 'h6',
     font: 'SFProText',
-    weight: 'semibold',
-    size: '12px',
-    lineHeight: '16px',
+    weight: 'font-semibold',
+    size: 'text-[12px]',
+    lineHeight: 'leading-[16px]',
   },
   {
     type: 'Button',
@@ -77,9 +78,19 @@ const headingProps = [
 
 const Heading = ({ type, as, children }) => {
   const element = headingProps.find((e) => e.type === type);
-  const Tag = element.tag;
+  const Tag = as || element.tag;
 
-  return <Tag className={clx()}>{children}</Tag>;
+  return (
+    <Tag
+      className={`
+  ${element.font}
+  ${element.weight}
+  ${element.size}
+  ${element.lineHeight}
+  `}>
+      {children}
+    </Tag>
+  );
 };
 
 export default Heading;
