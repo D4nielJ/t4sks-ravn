@@ -50,30 +50,6 @@ const headingProps = [
     size: 'text-[12px]',
     lineHeight: 'leading-[16px]',
   },
-  {
-    type: 'Button',
-    tag: 'span',
-    font: 'SFProText',
-    weight: 'medium',
-    size: '14px',
-    lineHeight: '20px',
-  },
-  {
-    type: 'Body',
-    tag: 'p',
-    font: 'SFProText',
-    weight: 'regular',
-    size: '14px',
-    lineHeight: '20px',
-  },
-  {
-    type: 'Caption',
-    tag: 'span',
-    font: 'SFProText',
-    weight: 'regular',
-    size: '12px',
-    lineHeight: '16px',
-  },
 ];
 
 const Heading = ({ type, as, children }) => {
@@ -82,12 +58,12 @@ const Heading = ({ type, as, children }) => {
 
   return (
     <Tag
-      className={`
-  ${element.font}
-  ${element.weight}
-  ${element.size}
-  ${element.lineHeight}
-  `}>
+      className={clsx([
+        element.font,
+        element.weight,
+        element.size,
+        element.lineHeight,
+      ])}>
       {children}
     </Tag>
   );

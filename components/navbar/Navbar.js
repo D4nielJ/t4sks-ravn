@@ -54,10 +54,10 @@ const Navbar = () => {
     <div className="flex flex-col items-center rounded-2xl bg-neutral-dark pt-6">
       <Logo />
       <nav>
-        <ul className="flex flex-col gap-y-4 pt-8">
+        <ul className="flex flex-col pt-8">
           {Links.map(({ icon, text, to }) => (
-            <li key={text} className="pl-4">
-              <Link text={text} to={text} icon={icon} />
+            <li key={text}>
+              <Link text={text} to={to} icon={icon} />
             </li>
           ))}
         </ul>
