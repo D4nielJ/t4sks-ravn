@@ -52,7 +52,7 @@ const headingProps = [
   },
 ];
 
-const Heading = ({ type, as, children }) => {
+const Heading = ({ type = 'DisplayMedium', as, children }) => {
   const element = headingProps.find((e) => e.type === type);
   const Tag = as || element.tag;
 
