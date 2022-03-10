@@ -4,6 +4,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      sans: '-apple-system, BlinkMacSystemFont, SF Pro Text, Segoe UI, Roboto, Helvetica Neue, sans-serif',
+      display:
+        '-apple-system, BlinkMacSystemFont, SF Pro Display, Segoe UI, Roboto, Helvetica Neue, sans-serif',
+    },
     spacing: {
       px: '1px',
       0: '0',
@@ -25,7 +30,7 @@ module.exports = {
         primary: '#008060',
         secondary: '#CCCCCC',
         interactive: '#2E72D2',
-        critical: '#2E72D2',
+        critical: '#D82C0D',
         warning: '#FFC453',
         success: '#008060',
         highlight: '#5BCDDA',
@@ -57,8 +62,15 @@ module.exports = {
           light: '#8C9196',
           lighter: '#BABEC3',
         },
+        border: {
+          critical: {
+            default: '#FD5749',
+            subdue: '#E0B3B2',
+            disabled: '#FFA7A3',
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };
