@@ -60,7 +60,13 @@ const inProgressTasks = [
   },
 ];
 
+const getTasks = () => {
+  const res = fetch()
+}
+
 const Kanban = () => {
+  const tasksQuery = useQuery('tasks', getTodos)
+
   return (
     <div className="flex flex-col gap-8">
       <ConfigButtons />
