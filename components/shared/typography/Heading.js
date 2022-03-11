@@ -37,7 +37,7 @@ const headingProps = [
   {
     type: 'Heading',
     tag: 'h5',
-    font: 'font-serif',
+    font: 'font-sans',
     weight: 'font-semibold',
     size: 'text-[16px]',
     lineHeight: 'leading-[24px]',
@@ -45,7 +45,7 @@ const headingProps = [
   {
     type: 'Subheading',
     tag: 'h6',
-    font: 'SFProText',
+    font: 'font-sans',
     weight: 'font-semibold',
     size: 'text-[12px]',
     lineHeight: 'leading-[16px]',
