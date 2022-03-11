@@ -1,4 +1,5 @@
 import React from 'react';
+import SimpleBar from 'simplebar-react';
 import ConfigButtons from './ConfigButtons';
 import KanbanColumn from './KanbanColumn';
 
@@ -41,6 +42,14 @@ const workingTasks = [
 
 const inProgressTasks = [
   {
+    id: '1',
+    name: 'Google',
+    tags: ['Android', 'React'],
+    dueDate: '6 July, 2020',
+    estimatedTime: '10:00',
+    userAvatar: 'srcString',
+  },
+  {
     id: '0',
     name: 'Slack',
     tags: ['IOS APP', 'Android'],
@@ -49,27 +58,21 @@ const inProgressTasks = [
     userAvatar: 'srcString',
     image: '/images/card-image.jpg',
   },
-  {
-    id: '1',
-    name: 'Google',
-    tags: ['Android', 'React'],
-    dueDate: '6 July, 2020',
-    estimatedTime: '10:00',
-    userAvatar: 'srcString',
-  },
 ];
 
 const Kanban = () => {
   return (
     <div className="flex flex-col gap-8">
       <ConfigButtons />
-      <ul className="flex gap-8 overflow-auto">
-        <KanbanColumn name="Working" tasks={workingTasks} />
-        <KanbanColumn name="In Progress" tasks={inProgressTasks} />
-        <KanbanColumn name="Done" tasks={workingTasks} />
-        <KanbanColumn name="Cancelled" tasks={workingTasks} />
-        <KanbanColumn name="Backlog" tasks={inProgressTasks} />
-      </ul>
+      <SimpleBar>
+        <ul className="flex gap-8">
+          <KanbanColumn name="Working" tasks={workingTasks} />
+          <KanbanColumn name="In Progress" tasks={inProgressTasks} />
+          <KanbanColumn name="Done" tasks={workingTasks} />
+          <KanbanColumn name="Cancelled" tasks={workingTasks} />
+          <KanbanColumn name="Backlog" tasks={inProgressTasks} />
+        </ul>
+      </SimpleBar>
     </div>
   );
 };
