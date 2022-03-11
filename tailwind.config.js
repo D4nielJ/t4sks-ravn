@@ -44,6 +44,11 @@ module.exports = {
           success: '#008060',
           highlight: '#347C84',
         },
+        surface: {
+          critical: {
+            default: '#FED3D1',
+          },
+        },
         icon: {
           default: '#5C5F62',
           subdued: '#8C9196',

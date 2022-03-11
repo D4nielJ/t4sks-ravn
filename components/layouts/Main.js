@@ -3,9 +3,9 @@ import Navbar from '../navbar/Navbar';
 
 const Main = ({ children }) => {
   return (
-    <div className="flex min-h-screen gap-x-8 bg-neutral-darker p-8 text-textOn">
+    <div className="flex min-h-screen max-w-full gap-x-8 overflow-clip bg-neutral-darker p-8 text-textOn">
       <Navbar />
-      <main className="w-full">{children}</main>
+      <main className="overflow-hidden">{children}</main>
     </div>
   );
 };
