@@ -6,7 +6,7 @@ const Main = ({ children }) => {
   return (
     <div className="flex h-screen max-w-full items-stretch gap-x-8 overflow-hidden bg-neutral-darker p-8 text-textOn">
       <Navbar />
-      <main className="max-h-full w-full overflow-hidden">{children}</main>
+      <main className="w-full">{children}</main>
     </div>
   );
 };
