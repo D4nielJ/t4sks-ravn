@@ -5,7 +5,7 @@ import TaskCard from './TaskCard';
 
 const KanbanColumn = ({ name, tasks }) => {
   return (
-    <li className="w-[320px] flex-shrink-0 overflow-y-auto">
+    <li className="w-[320px] flex-shrink-0">
       {/* ColumnHeader */}
       <div className="mb-4 flex items-center justify-between">
         <div>
@@ -18,6 +18,7 @@ const KanbanColumn = ({ name, tasks }) => {
           <HiOutlineDotsHorizontal />
         </span>
       </div>
+
       {/* Tasks */}
       <ul className="flex flex-col gap-4 ">
         {tasks && tasks.map((t) => <TaskCard key={t.id} task={t} />)}

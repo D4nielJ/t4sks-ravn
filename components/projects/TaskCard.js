@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import { Heading } from '../shared';
 
 const TaskCard = ({ task }) => {
@@ -12,11 +13,28 @@ const TaskCard = ({ task }) => {
             src={image}
             alt=""
             layout="fill"
-            className="absolute inset-0 rounded-lg object-cover"
+            className="rounded-lg object-cover"
           />
         </div>
       )}
-      <Heading type="Heading">{name}</Heading>
+
+      {/* Header */}
+      <div className="flex justify-between">
+        <Heading type="Heading">{name}</Heading>
+        <span className="text-2xl text-neutral-light">
+          <HiOutlineDotsHorizontal />
+        </span>
+      </div>
+
+      {/* Times */}
+      <div className="flex justify-between">
+        <div>{estimatedTime}</div>
+        <div>{dueDate}</div>
+      </div>
+
+      {/* Tags */}
+
+      {/* Footer */}
     </li>
   );
 };

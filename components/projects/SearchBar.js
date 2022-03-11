@@ -21,7 +21,7 @@ const SearchBar = () => {
             src="/images/profile-pic.jpg"
             layout="fill"
             alt=""
-            className="rounded-full"
+            className="rounded-full object-cover"
           />
         </span>
       </div>
