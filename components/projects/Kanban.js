@@ -30,7 +30,7 @@ const workingTasks = [
     userAvatar: 'srcString',
   },
   {
-    id: '0',
+    id: '3',
     name: 'Slack',
     tags: ['IOS APP', 'Android'],
     dueDate: 'Tomorrow', // DateObject?
