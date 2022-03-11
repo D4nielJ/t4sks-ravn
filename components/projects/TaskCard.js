@@ -2,11 +2,12 @@ import Image from 'next/image';
 import React from 'react';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import {
-  MdOutlineSearch,
+  MdOutlineTimer,
   MdOutlineAttachFile,
   MdOutlineComment,
 } from 'react-icons/md';
 import { RiGitMergeLine } from 'react-icons/ri';
+import { AiOutlineClockCircle } from 'react-icons/ai';
 import { Heading, Tag, Text } from '../shared';
 
 const TaskCard = ({ task }) => {
@@ -35,8 +36,18 @@ const TaskCard = ({ task }) => {
 
       {/* Times */}
       <div className="flex justify-between">
-        <div>{estimatedTime}</div>
-        <div>{dueDate}</div>
+        <div className="flex items-center gap-1 rounded bg-neutral-default py-1 pl-1 pr-2">
+          <div className="text-lg">
+            <MdOutlineTimer />
+          </div>
+          <Text>{estimatedTime}</Text>
+        </div>
+        <div className="flex items-center gap-1 rounded bg-neutral-default py-1 pl-1 pr-2">
+          <div className="text-xl">
+            <AiOutlineClockCircle />
+          </div>
+          <Text>{dueDate}</Text>
+        </div>
       </div>
 
       {/* Tags */}
