@@ -1,5 +1,5 @@
 <div align="center">
-<h1><a href="https://music-candy.netlify.app/" target="_blank">IT T4SKS</a></h1>
+<h1><a href="https://t4sks-ravn.netlify.app/" target="_blank">IT T4SKS</a></h1>
 </div>
 
 <div align="center">
