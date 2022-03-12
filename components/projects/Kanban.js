@@ -18,17 +18,17 @@ const Kanban = () => {
   const { working, inProgress, done, cancelled, backlog } = tasks;
 
   useEffect(() => {
-    if (!isLoading) {
+    if (!isLoading && !error) {
       setTasks(filterTasks(data));
     }
-  }, [data, isLoading]);
+  }, [data, isLoading, error]);
 
   if (isLoading) {
     return <div>Is loading</div>;
   }
 
   if (error) {
-    return <div>{error.response.message}</div>;
+    return <div>{JSON.stringify(error)}</div>;
   }
 
   return (
