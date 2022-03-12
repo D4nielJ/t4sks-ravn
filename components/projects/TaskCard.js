@@ -11,20 +11,18 @@ import { AiOutlineClockCircle } from 'react-icons/ai';
 import { Heading, Tag, Text } from '../shared';
 
 const TaskCard = ({ task }) => {
-  const { name, tags, dueDate, estimatedTime, userAvatar, image } = task;
+  const { name, tags, dueDate, pointEstimate: estimatedTime } = task;
 
   return (
     <li className="flex flex-col gap-4 rounded-xl bg-neutral-dark p-4">
-      {image && (
-        <div className="relative aspect-[16/9] w-full">
-          <Image
-            src={image}
-            alt=""
-            layout="fill"
-            className="rounded-lg object-cover"
-          />
-        </div>
-      )}
+      <div className="relative aspect-[4/1] w-full">
+        <Image
+          src="/images/card-image.jpg"
+          alt=""
+          layout="fill"
+          className="rounded-lg object-cover"
+        />
+      </div>
 
       {/* Header */}
       <div className="flex justify-between">
