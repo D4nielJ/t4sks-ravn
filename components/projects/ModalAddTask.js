@@ -8,7 +8,7 @@ import { Heading, Text } from '../shared';
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#__next');
 
-const tagsValues = ['ANDROID', 'IOS', 'NODEJS', 'REACT', 'RAILS'];
+const tagsValues = ['ANDROID', 'IOS', 'NODE_JS', 'REACT', 'RAILS'];
 
 const findTags = (stateArray) => {
   const tags = tagsValues.filter((_tag, i) => stateArray[i]);
