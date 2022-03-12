@@ -1,17 +1,10 @@
-import { useMutation, useQueryClient } from 'react-query';
+import { useState } from 'react';
 import { MdMenu, MdOutlineDashboard } from 'react-icons/md';
 import { AiOutlinePlus } from 'react-icons/ai';
-import { addTask } from '../../lib/apiClient';
+import ModalAddTask from './ModalAddTask';
 
 const ConfigButtons = () => {
-  const queryClient = useQueryClient();
-
-  const mutation = useMutation(addTask, {
-    onSuccess: () => {
-      // Invalidate and refetch
-      queryClient.invalidateQueries('tasks');
-    },
-  });
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   return (
     <div className="flex justify-between">
@@ -31,16 +24,7 @@ const ConfigButtons = () => {
       </div>
       <div>
         <button
-          onClick={() => {
-            mutation.mutate({
-              assigneeId: 'd923f8f3-49d8-4edb-9738-929eea1dccec',
-              dueDate: '2022-04-13T04:47:19.889Z',
-              name: 'MY CANCELLED TASK',
-              pointEstimate: 'EIGHT',
-              status: 'CANCELLED',
-              tags: ['ANDROID', 'REACT'],
-            });
-          }}
+          onClick={() => setIsOpen(true)}
           type="button"
           className="rounded-xl bg-icon-critical p-2">
           <span className="text-2xl text-textOn">
@@ -48,6 +32,7 @@ const ConfigButtons = () => {
           </span>
         </button>
       </div>
+      <ModalAddTask modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };
